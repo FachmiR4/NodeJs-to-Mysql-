@@ -1,11 +1,11 @@
 {
   "dependencies": {
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "pg": "^8.11.3"
   },
   "name": "part-1",
   "version": "1.0.0",
   "main": "database.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
