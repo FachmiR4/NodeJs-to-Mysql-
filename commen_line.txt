@@ -1,0 +1,97 @@
+postgres-# \l
+                                                                      List of databases
+   Name    |  Owner   | Encoding | Locale Provider |          Collate           |           Ctype            | ICU Locale | ICU Rules |   Access privileges
+-----------+----------+----------+-----------------+----------------------------+----------------------------+------------+-----------+-----------------------
+ postgres  | postgres | UTF8     | libc            | English_United States.1252 | English_United States.1252 |
+  |           |
+ template0 | postgres | UTF8     | libc            | English_United States.1252 | English_United States.1252 |
+  |           | =c/postgres          +
+           |          |          |                 |                            |                            |
+  |           | postgres=CTc/postgres
+ template1 | postgres | UTF8     | libc            | English_United States.1252 | English_United States.1252 |
+  |           | =c/postgres          +
+           |          |          |                 |                            |                            |
+  |           | postgres=CTc/postgres
+(3 rows)
+
+
+postgres-# \dt
+         List of relations
+ Schema | Name  | Type  |  Owner
+--------+-------+-------+----------
+ public | users | table | postgres
+(1 row)
+
+
+postgres-# \s
+history is not supported by this installation
+
+postgres-# \d users
+                 Table "public.users"
+  Column   |  Type   | Collation | Nullable | Default
+-----------+---------+-----------+----------+---------
+ id        | integer |           | not null |
+ firstname | text    |           |          |
+ lastname  | text    |           |          |
+ location  | text    |           |          |
+Indexes:
+    "users_pkey" PRIMARY KEY, btree (id)
+
+
+postgres-# \df
+                       List of functions
+ Schema | Name | Result data type | Argument data types | Type
+--------+------+------------------+---------------------+------
+(0 rows)
+
+
+postgres-# \dn
+      List of schemas
+  Name  |       Owner
+--------+-------------------
+ public | pg_database_owner
+(1 row)
+
+
+postgres-# \du
+                             List of roles
+ Role name |                         Attributes
+-----------+------------------------------------------------------------
+ postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS
+
+
+postgres-# \dv
+Did not find any relations.
+
+
+postgres=# select *from users;
+ id | firstname | lastname | location
+----+-----------+----------+----------
+  6 | fachmi    | ramadhan | depok
+  5 | dody      | jayadi   | jakarta
+  4 | bagas     | sanadi   | bogor
+  3 | jaka      | juki     | depok
+  2 | malisa    | nasuha   | bogor
+  1 | mawar     | melati   | jakarta
+(6 rows)
+
+
+postgres=# \g
+ id | firstname | lastname | location
+----+-----------+----------+----------
+  6 | fachmi    | ramadhan | depok
+  5 | dody      | jayadi   | jakarta
+  4 | bagas     | sanadi   | bogor
+  3 | jaka      | juki     | depok
+  2 | malisa    | nasuha   | bogor
+  1 | mawar     | melati   | jakarta
+(6 rows)
+
+
+postgres=# select count(*) from product
+
+postgres=# \timing
+
+postgres=# \e
+
+postgres=# \q
